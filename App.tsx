@@ -1,14 +1,21 @@
 import React from 'react'
-import BoxObjectModelScreen from './src/screens/BoxObjectModelScreen'
-import TareaBoxesScreen from './src/screens/TareaBoxesScreen'
+import { SafeAreaView, StatusBar } from 'react-native'
+import CalculadoraScreen from './src/Components/screens/CalculadoraScreen'
+
+import { styles } from './src/Components/theme/appTheme'
 /* import { ContadorScreen } from './src/screens/ContadorScreen'
 import HolaMundoScreen from './src/screens/HolaMundoScreen'
  */
 
 const App = () => {
   return (
-
-    <TareaBoxesScreen />
+    <SafeAreaView style={styles.fondo}>
+      <StatusBar
+        backgroundColor="black"
+        barStyle="light-content"
+      />
+      <CalculadoraScreen />
+    </SafeAreaView>
 
   )
 }
