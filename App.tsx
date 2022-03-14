@@ -1,22 +1,15 @@
 import React from 'react'
-import { SafeAreaView, StatusBar } from 'react-native'
-import CalculadoraScreen from './src/Components/screens/CalculadoraScreen'
-
-import { styles } from './src/Components/theme/appTheme'
-/* import { ContadorScreen } from './src/screens/ContadorScreen'
-import HolaMundoScreen from './src/screens/HolaMundoScreen'
- */
+import { NavigationContainer } from '@react-navigation/native'
+import { StackNavigator } from './src/navigator/StackNavigator'
+import 'react-native-gesture-handler'
+import { DrawerLeftMenuBasic } from './src/navigator/DrawerLeftMenuBasic'
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.fondo}>
-      <StatusBar
-        backgroundColor="black"
-        barStyle="light-content"
-      />
-      <CalculadoraScreen />
-    </SafeAreaView>
-
+    <NavigationContainer>
+      {/*   <DrawerLeftMenuBasic /> */}
+      <StackNavigator />
+    </NavigationContainer>
   )
 }
 
