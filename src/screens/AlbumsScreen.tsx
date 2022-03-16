@@ -1,12 +1,20 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React, { useContext } from 'react';
+import { View, Text, Button } from 'react-native';
+import { AuthContext } from '../context/AuthContext';
 
 const AlbumsScreen = () => {
+
+    const { signOut, signIn, authState } = useContext(AuthContext);
+
+
     return (
         <View>
             <Text>AlbumsScreen</Text>
-        </View>
-    )
-}
+            <Text>{JSON.stringify(authState, null, 4)}</Text>
+            {authState.isLoggedIn ? <Button title="Sign Out" onPress={signOut} /> : <Button title="Sign In" onPress={signIn} />}
 
-export default AlbumsScreen
+        </View>
+    );
+};
+
+export default AlbumsScreen;

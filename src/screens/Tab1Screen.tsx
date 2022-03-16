@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Text, View, Button } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
+import { TouchableIcon } from '../Components/TouchableIcon';
 
 const Tab1Screen = () => {
 
@@ -10,11 +11,11 @@ const Tab1Screen = () => {
             <Text>Tab 1</Text>
             <Button title="Go to Tab 2" onPress={() => { }} />
             <Text>
-                <Icon name="airplane-outline" size={80} color="black" />;
-                <Icon name="arrow-forward-circle-outline" size={80} color="blue" />;
-                <Icon name="arrow-back-circle-outline" size={80} color="red" />;
-                <Icon name="arrow-up-circle-outline" size={80} color="green" />;
-                <Icon name="beer-outline" size={80} color="blue" />;
+                <TouchableIcon name="airplane-outline" />
+                <TouchableIcon name="arrow-forward-circle-outline" />
+                <TouchableIcon name="arrow-back-circle-outline" />
+                <TouchableIcon name="arrow-up-circle-outline" />
+                <TouchableIcon name="beer-outline" />
             </Text>
         </View>
     );
